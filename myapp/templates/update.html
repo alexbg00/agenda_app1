@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% block content %} 
+<h1>Actualizar contacto - {{ contact.fullname }}</h1>
+<a href="/">Atras</a><br><br>
+
+<form action="/update/{{ contact.uid }}" method="post">
+    <label for="nick_input">Nick</label>
+    <input type="text" name="nick" id="nick_input" value="{{ contact.nick }}"><br><br>
+
+    <label for="first_name_input">Nombre</label>
+    <input type="text" name="first_name" id="first_name_input" value="{{ contact.first_name }}"><br><br>
+
+    <label for="last_name_input">Apellido</label>
+    <input type="text" name="last_name" id="last_name_input" value="{{ contact.last_name }}"><br><br>
+
+    <label for ="phone">Telefono</label>
+    <input type="tel" name="phone" id="phone_input" value="{{ contact.phone }}"><br><br>
+
+    <input type="submit" value="Actualizar">
+</form>
+
+
+{% endblock %}

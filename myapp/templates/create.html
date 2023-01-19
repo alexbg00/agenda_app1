@@ -1,0 +1,59 @@
+{% extends 'base.html' %} {% block content %} 
+<h1>Crear contacto</h1>
+<a href="/">Volver</a><br><br>
+
+<form id="createform" action="/create" method="post">
+
+    <table>
+        <tbody>
+            <tr>
+                <td class="campo">
+                    <label for="nick_input">Nick</label>
+                </td>
+                <td>
+                    <input type="text" name="nick" id="nick_input"><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td class="campo">
+                    <label for="first_name_input">Nombre</label>
+                </td>
+                <td>
+                    <input type="text" name="first_name" id="first_name_input"><br><br>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="campo">
+                    <label for="last_name_input">Apellido</label>
+                </td>
+                <td>
+                    <input type="text" name="last_name" id="last_name_input"><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td class="campo">
+                    <label for ="phone">Telefono</label>
+                </td>
+                <td>
+                    <input type="tel" name="phone" id="phone_input"><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="fila-boton" colspan="2">
+                    <button id="submitButton">Añadir</button>
+                </td>
+                </tr>
+        </tbody>
+        </table>
+</form>
+
+<button id ="clearButton">Limpiar</button>
+<button id="hideButton">Ocultar</button>
+<button id="showButton">Mostrar</button>
+{% endblock %}
+
+<% block js %>
+<script src="..\static\validation.js"></script>
+<% endblock %>

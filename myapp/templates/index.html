@@ -1,0 +1,21 @@
+<!-- Se cargan los elementos comunes de las páginas -->
+{% extends 'base.html' %} 
+{% block content %} 
+<h1>Lista de contactos</h1>
+
+<a href="/create">Añadir</a>
+
+<!-- Contenido de esta página -->
+<ul>
+    {% for contact in contacts %}
+        <li>
+             {{ contact.nick }}
+            <a href="/update/{{ contact.uid }}">Actualizar</a>
+            <a href="/delete/{{ contact.uid }}">Eliminar</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+
+
